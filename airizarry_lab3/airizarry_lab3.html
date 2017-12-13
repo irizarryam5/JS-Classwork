@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                
+                <title>Lab 3, Alex Irizarry, 9/19/14</title>
+
+        </head>
+        <body>
+                
+    <script>
+       <!-- Keeps the time of the day -->
+      var hour = 0;
+      
+      <!-- Variables that determine whether or not a greeting has been displayed -->
+      var saidMorning = false;
+      var saidAfternoon = false;
+      var saidEvening = false;
+      var saidNight = false;
+      
+      <!-- Process the greetings as long as it doesn't go past midnight. (one 24 hour cycle) -->
+      while (hour < 24) {
+	  
+          <!-- Determine which greeting to use -->
+          if (hour < 12) {
+              if(saidMorning === false){
+                  document.write("Good morning");
+              }
+          } else if (hour < 18) {
+             if(saidAfternoon === false){
+                  document.write("Good afternoon");
+              }
+          } else if (hour < 22) {
+              if(saidEvening === false){
+                  document.write("Good evening");
+              }
+          } else {
+              if(saidNight === false){
+                  document.write("Good night");
+              }
+          }
+          hour++;
+      }
+    
+    </script>
+	
+        </body>
+</html>
+

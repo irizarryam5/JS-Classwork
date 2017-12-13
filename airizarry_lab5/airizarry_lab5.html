@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!--	HTML5 JS Template - CMSY 172
+			Use this template to create new JS pages.
+		-->
+		<!-- Alex Irizarry - Lab #5 - 10/3/14 -->
+		
+		<title>Lab 5</title>
+		
+	</head>
+	<body>
+	<h1></h1>
+	
+	<p></p>
+	
+
+	<script>
+		//array used to hold strings containing color names
+		var color = ["red", "green", "blue"];
+		
+		//function used to print an array and display length of the array
+		function showColors(arrayIn){
+			var colorLength = arrayIn.length;
+			
+			document.write(colorLength + "<br>");
+			
+			for(var i=0; i<colorLength; i++){
+				document.write(arrayIn[i] + "<br>");
+			}
+		}
+		
+		//list of instructed commands
+		showColors(color);		
+		color.push("orange", "purple", "black");		
+		showColors(color);
+		color.unshift("yellow");
+		showColors(color);
+		color.shift();
+		showColors(color);
+		color.splice(4, 1, "yellow");
+		showColors(color);
+		
+	</script>
+	
+	</body>
+</html>
+	
+

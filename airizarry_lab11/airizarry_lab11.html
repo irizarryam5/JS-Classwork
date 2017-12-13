@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    
+		<!-- CMSY172 - Anonymous Functions, Scope, and Closures -->
+		
+		<title>Anonymous Functions, Scope, and Closures</title>
+
+	</head>
+	<body>
+  
+    <p id="output"></p>
+    
+    <script>
+     var output = document.getElementById("output");
+	 
+	 window.onload = function (){
+		output.innerHTML += "Page fully loaded" + "<br>";
+	}
+	
+	function inner(){
+		function within(){
+			output.innerHTML += "Inner function executed from within the outer function" + "<br>";
+		}
+		
+		within();
+	}
+	
+	inner();
+	
+	function setCounter(counter){
+		return function (){
+			return counter++;
+		}
+	}
+	
+	var getCount = setCounter(1);
+	
+	for(var i=0; i<4; i++){
+		output.innerHTML += getCount() + "<br>";
+	}
+	
+	window.setTimeout(function (){
+		output.innerHTML += "Timeout executed";
+	}, 5000);
+      
+    </script>
+    
+	</body>
+</html>
